@@ -132,7 +132,6 @@ body {
 .login-drawer ul li a{
     display: flex;
     text-align: center;
-    justify-content: center;
     gap: 5px;
 }
 .user-icon2{
