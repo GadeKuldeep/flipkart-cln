@@ -86,7 +86,58 @@ body {
     display: inline-block;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.login-drawer {
+    position: absolute;
+    top: 70px;
+    margin-top: -10px;
+    left: auto;
+    right: 300px; /* adjust according to your layout */
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    padding: 10px 0;
+}
 
+.login-drawer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.login-drawer li {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-drawer li:hover {
+    background-color: #f5f5f5;
+}
+
+.login-drawer a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ✨ Show drawer ONLY when hovering over the button or the drawer itself */
+.Login:hover + .login-drawer,
+.login-drawer:hover {
+    display: flex;
+}
+.login-drawer ul li a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 5px;
+}
+.user-icon2{
+    height: 15px;
+}
 .cart {
     display: flex;
     gap: 5px;
