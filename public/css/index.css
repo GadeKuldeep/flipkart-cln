@@ -232,3 +232,6 @@ body {
 .slider-nav a:focus {
   background-color: #2874f0; /* Flipkart Blue */
 }
+.slider-nav a.active-dot {
+  background-color: #333; /* Darker when active */
+}
