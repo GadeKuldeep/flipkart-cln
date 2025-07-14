@@ -10,7 +10,16 @@ body {
     font-size: 19px;
     background-color: #F1F2F4;
     cursor: pointer;
+
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 
 .Navbar {
     height: 70px;
@@ -247,6 +256,11 @@ body {
     background-color: #333;
 }
 
+.section2 {
+    position: relative;
+    display: flex;
+}
+
 .mobile-deals {
     height: 300px;
     width: 1025px;
@@ -266,9 +280,9 @@ body {
 }
 
 .images-deals {
-    padding: 25px 0 ;
+    padding: 25px 0;
     padding-left: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     gap: 57px;
     overflow-x: auto;
@@ -279,12 +293,13 @@ body {
     display: none;
 }
 
-.images-deals > div {
+.images-deals>div {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 160px;
-    flex-shrink: 0; /* prevent shrinking on scroll */
+    flex-shrink: 0;
+    /* prevent shrinking on scroll */
 }
 
 .images-deals img {
@@ -292,20 +307,41 @@ body {
     object-fit: cover;
     border: none;
     box-shadow: none;
-    transition: transform 0.3s ease;
-    padding: 0; /* remove padding inside image box */
+    transition: transform 0.2s ease;
+    padding: 0;
+    /* remove padding inside image box */
 }
 
 .images-deals img:hover {
-    transform: scale(1.04);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
 .text {
-    margin-top: 8px;
+    margin-top: 15px;
     font-size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #333;
     text-align: center;
 }
 
+.price {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.section2-aside {
+    background-color: #FFFFFF;
+    height: 300px;
+    width: 170px;
+    overflow: hidden;
+    padding-top: 18px;
+    gap: 20px;
+    display: flex;
+}
+
+.section2-aside img {
+    margin-left: -6px;
+    height: 280px;
+}

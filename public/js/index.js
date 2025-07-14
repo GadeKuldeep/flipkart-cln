@@ -60,3 +60,15 @@ function updateActiveNav(index) {
     link.classList.toggle("active-dot", i === index);
   });
 }
+  const adImages = [
+    "https://rukminim2.flixcart.com/fk-p-flap/1060/1620/image/e56681e42c1ed95c.jpeg?q=60",
+    "https://rukminim2.flixcart.com/fk-p-flap/1060/1620/image/c1b2d38a68c48c63.jpeg?q=60"
+  ];
+
+  let currentAd = 0;
+  const adImageElement = document.querySelector('.ad-image');
+
+  setInterval(() => {
+    currentAd = (currentAd + 1) % adImages.length;
+    adImageElement.src = adImages[currentAd];
+  }, 6000); // Switch every 3 seconds
